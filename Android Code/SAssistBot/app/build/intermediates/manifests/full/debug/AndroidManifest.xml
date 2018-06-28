@@ -79,6 +79,7 @@
         <activity android:name="com.example.weiwenjie.sassistbot.AccEditActivity" />
         <activity android:name="com.example.weiwenjie.sassistbot.AccMenu" />
         <activity android:name="com.example.weiwenjie.sassistbot.SmartThings" />
+        <activity android:name="com.example.weiwenjie.sassistbot.ImportItems" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

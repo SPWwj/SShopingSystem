@@ -100,23 +100,23 @@ public final class R {
         public static final int right_icon = 0x7f070087;
         public static final int right_side = 0x7f070088;
         public static final int start = 0x7f0700a4;
-        public static final int tag_transition_group = 0x7f0700aa;
-        public static final int text = 0x7f0700ab;
-        public static final int text2 = 0x7f0700ac;
-        public static final int time = 0x7f0700b3;
-        public static final int title = 0x7f0700b4;
-        public static final int top = 0x7f0700ba;
+        public static final int tag_transition_group = 0x7f0700ab;
+        public static final int text = 0x7f0700ac;
+        public static final int text2 = 0x7f0700ad;
+        public static final int time = 0x7f0700b4;
+        public static final int title = 0x7f0700b5;
+        public static final int top = 0x7f0700bb;
     }
     public static final class integer {
         public static final int status_bar_notification_info_maxnum = 0x7f080005;
     }
     public static final class layout {
-        public static final int notification_action = 0x7f090027;
-        public static final int notification_action_tombstone = 0x7f090028;
-        public static final int notification_template_custom_big = 0x7f09002f;
-        public static final int notification_template_icon_group = 0x7f090030;
-        public static final int notification_template_part_chronometer = 0x7f090034;
-        public static final int notification_template_part_time = 0x7f090035;
+        public static final int notification_action = 0x7f090028;
+        public static final int notification_action_tombstone = 0x7f090029;
+        public static final int notification_template_custom_big = 0x7f090030;
+        public static final int notification_template_icon_group = 0x7f090031;
+        public static final int notification_template_part_chronometer = 0x7f090035;
+        public static final int notification_template_part_time = 0x7f090036;
     }
     public static final class string {
         public static final int status_bar_notification_info_overflow = 0x7f0d0039;

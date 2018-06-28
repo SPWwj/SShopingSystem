@@ -37,7 +37,8 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".AccEditActivity" />
         <activity android:name=".AccMenu" />
-        <activity android:name=".SmartThings"></activity>
+        <activity android:name=".SmartThings" />
+        <activity android:name=".ImportItems"></activity>
     </application>
 
 </manifest>

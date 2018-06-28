@@ -135,6 +135,7 @@
                 android:weightSum="3"
                 >
                 <LinearLayout
+                    android:onClick="GoImport"
                     android:layout_width="0dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
@@ -147,7 +148,7 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="20dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_icon_boxing"
+                        android:src="@drawable/ic_assignment_return_black_24dp"
                         android:tint="@color/colorWhite"
                         />
                     <TextView
@@ -156,8 +157,8 @@
                         android:padding="8dp"
                         android:layout_marginTop="30dp"
                         android:background="@color/colorGrassDark"
-                        android:text="Boxing"
-                        android:textSize="18sp"
+                        android:text="Import"
+                        android:textSize="15sp"
                         android:textAlignment="center"
                         android:textColor="@color/colorWhite"
                         />

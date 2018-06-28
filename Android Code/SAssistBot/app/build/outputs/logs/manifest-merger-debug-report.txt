@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/5e86849aaa794461b0ebabaf844efb37/AndroidManifest.xml:17:1-22:12
 MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.12] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/android-gif-drawable-1.2.12.aar/0f67155012b3c968a32fb06739fa0dd7/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.1.aar/7ae82293d6d2bd1fbf7aec3411fb740b/AndroidManifest.xml:2:1-11:12
@@ -48,20 +48,20 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/WeiWenJie/.gradle/ca
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/play-services-measurement-base-16.0.0.aar/2f3b762b3f03491514b22a20fbf1518a/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/3a227794dfe07a357bf643d4c4284e5d/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8d93659a53b8ce875d89b49831db9e10/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
-INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
+INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:3:5-47
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
-		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-43:12
+		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:1-44:12
 		INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:2:11-69
@@ -96,7 +96,7 @@ ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAss
 	android:name
 		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:11:29-69
 application
-ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:13:5-41:19
+ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:13:5-42:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.1.aar/7ae82293d6d2bd1fbf7aec3411fb740b/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.1.aar/7ae82293d6d2bd1fbf7aec3411fb740b/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-vision:15.0.2] /Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/play-services-vision-15.0.2.aar/dbeedf931506f0ba53ead0d6805e4b3e/AndroidManifest.xml:7:5-20
@@ -214,9 +214,13 @@ ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAss
 	android:name
 		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:39:19-42
 activity#com.example.weiwenjie.sassistbot.SmartThings
-ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:40:9-58
+ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:40:9-49
 	android:name
 		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:40:19-46
+activity#com.example.weiwenjie.sassistbot.ImportItems
+ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:41:9-58
+	android:name
+		ADDED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml:41:19-46
 uses-sdk
 INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/src/main/AndroidManifest.xml

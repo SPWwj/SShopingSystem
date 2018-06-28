@@ -56,5 +56,13 @@ public class MainActivity extends AppCompatActivity {
         }
         else Toast.makeText(MainActivity.this,"Please Sign in first!",Toast.LENGTH_SHORT).show();
     }
+
+    public void GoImport(View view) {
+        if(mAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(MainActivity.this, ImportItems.class);
+            startActivity(intent);
+        }
+        else Toast.makeText(MainActivity.this,"Please Sign in first!",Toast.LENGTH_SHORT).show();
+    }
 }
 
