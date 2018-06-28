@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -22,8 +24,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.ByteArrayOutputStream;
+import java.text.DecimalFormat;
 
 
 public class ProfileActivity extends AppCompatActivity {
@@ -33,12 +41,19 @@ public class ProfileActivity extends AppCompatActivity {
     TextView textView;//veri
     ImageView imageView;
     TextView tvName;
+    TextView tvBalance;
+    EditText etTopUp;
 
     ProgressBar progressBar;
 
 
     FirebaseAuth mAuth;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef;
+
+    private static DecimalFormat df2 = new DecimalFormat(".##");
     static ProfileActivity pa;
+    private double Bal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +66,33 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        tvName = (TextView) findViewById(R.id.tvName);
-        imageView = (ImageView) findViewById(R.id.imageView);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
-        textView = (TextView) findViewById(R.id.textViewVerified);
+        etTopUp=findViewById(R.id.etTopUp);
+        tvBalance=findViewById(R.id.tvBalance);
+        myRef=database.getReference("Balance");
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                Bal = dataSnapshot.getValue(Double.class);
+                tvBalance.setText("$"+df2.format(Bal));
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                Toast.makeText(ProfileActivity.this,"Fail to read to Balance",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        tvName = findViewById(R.id.tvName);
+        imageView = findViewById(R.id.imageView);
+        progressBar = findViewById(R.id.progressbar);
+        textView = findViewById(R.id.textViewVerified);
 
     }
+
 
 
     @Override
@@ -146,4 +182,23 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
 
+    public void TopUp(View view) {
+        String s = etTopUp.getText().toString();
+        double value;
+        if(!s.isEmpty())
+        {
+            try
+            {
+                value= Double.parseDouble(s);
+                // it means it is double
+                myRef.setValue((Bal+value));
+            } catch (Exception e1) {
+                // this means it is not double
+                Toast.makeText(ProfileActivity.this, "Pleas enter corrent Amount", Toast.LENGTH_SHORT).show();
+                e1.printStackTrace();
+            }
+
+        }
+        else  Toast.makeText(ProfileActivity.this, "Pleas enter corrent Amount", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -23,8 +23,11 @@ public class MainActivity extends AppCompatActivity {
         botview.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
+                if(mAuth.getCurrentUser() != null) {
                 Intent intent = new Intent(MainActivity.this, BotView.class);
                 startActivity(intent);
+                }
+                else Toast.makeText(MainActivity.this,"Please Sign in first!",Toast.LENGTH_SHORT).show();
             }
         });
 
