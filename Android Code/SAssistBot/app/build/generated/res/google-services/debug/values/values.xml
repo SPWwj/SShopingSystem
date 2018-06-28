@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">31550330246-e4anuoef2nfgnnl93b4pj399mr8go75a.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://sassistbot.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">31550330246</string>
+    <string name="google_api_key" translatable="false">AIzaSyD3k4EXYrA4Hg1IrSgkpt5f9SuPv0Glkug</string>
+    <string name="google_app_id" translatable="false">1:31550330246:android:414b918da78703ab</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD3k4EXYrA4Hg1IrSgkpt5f9SuPv0Glkug</string>
+    <string name="google_storage_bucket" translatable="false">sassistbot.appspot.com</string>
+    <string name="project_id" translatable="false">sassistbot</string>
+</resources>
