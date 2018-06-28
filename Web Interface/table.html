@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="https://d3plus.org/js/d3.js"></script>
+<script src="https://d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+	var url = "https://sassistbot.firebaseio.com/Store0.json";
+	var visualization
+	var loadedData = null;
+	d3.json(url, function (data) {
+		loadedData = data;
+		for (var i = 0; i < data.length; i++) {
+			data[i]["Sold"] = 100 - data[i]["Stock"];
+		}
+		visualization = d3plus.viz()
+			.container("#viz")
+			.data(data)
+			.type("table")
+			.id("item")
+			.shape("square")
+			.cols(["Stock", "Sold", "Expire"])
+			.draw();
+	});
+
+	var inter = setInterval(function () {
+		var firstTime = true;
+		d3.json(url, function (data) {
+			// google.maps.event.trigger(map, 'resize');
+			loadedData = data;
+			for (var i = 0; i < data.length; i++) {
+				data[i]["Sold"] = 100 - data[i]["Stock"];
+			}
+
+			visualization.data(data).draw();
+
+		});
+	}, 1500);
+
+</script>
