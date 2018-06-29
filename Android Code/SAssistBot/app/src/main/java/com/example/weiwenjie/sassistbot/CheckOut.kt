@@ -32,6 +32,7 @@ import com.google.firebase.database.ValueEventListener
 val mAuth = FirebaseAuth.getInstance()
 internal var database = FirebaseDatabase.getInstance()
 val myRef = database.getReference("Balance")
+var myStoreRef=database.getReference("Store0");
 
 private var itemsAdapter: ArrayAdapter<String>? = null
 private var items: ArrayList<String>? = null
@@ -39,7 +40,10 @@ private var items: ArrayList<String>? = null
 private var buysList: ArrayList<String>? = null
 private var buyUnit :IntArray? = null
 private var boughtUnit :IntArray? = null
+private var StockArray :IntArray = intArrayOf(0, 0, 0, 0, 0)
 internal var buyName: kotlin.Array<String>? = null
+private  var boolBal=false
+private  var boolStore=false
 private var Bal: Double = 0.toDouble()
 class CheckOut : AppCompatActivity() {
 
@@ -53,6 +57,7 @@ class CheckOut : AppCompatActivity() {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 Bal = dataSnapshot.getValue(Double::class.java)!!
+                boolBal=true
 
             }
 
@@ -60,6 +65,22 @@ class CheckOut : AppCompatActivity() {
                 // Failed to read value
             }
         })
+        for(i in 0 until StockArray!!.size-1){
+            myStoreRef= database.getReference("Store0/"+i+"/Stock")
+            myStoreRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    StockArray[i] = dataSnapshot.getValue(Int::class.java)!!
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Failed to read value
+                }
+            })
+            if(i== StockArray.size-1) boolStore=true
+        }
         buyUnit = intent.extras.getIntArray("buyUnit")
         buyName = intent.extras.getStringArray("buyName")
         boughtUnit = intent.extras.getIntArray("boughtUnit")
@@ -98,29 +119,41 @@ class CheckOut : AppCompatActivity() {
         }
 
         imageView.setOnClickListener() {
-            if (Bal > totalPrice.toDouble()) {
-                val mAlertDialog = AlertDialog.Builder(this@CheckOut)
-                mAlertDialog.setTitle("Check Out")
-                mAlertDialog.setMessage("Total price is : $" + totalPrice + "\nComfirm to Proceed")
-                mAlertDialog.setIcon(R.mipmap.ic_launcher);
-                mAlertDialog.setPositiveButton("Comfirm") { dialog, id ->
-                    Toast.makeText(this@CheckOut, "Thank you!", Toast.LENGTH_SHORT).show()
-                    writeItemsTobuy()
-                    writeBought()
-                    Bal-=totalPrice.toDouble()
-                    myRef.setValue(Bal)
-                    getInstance().bvClear()
-                    getInstance().finish()
-                    finish()
+            if ( boolBal && boolStore) {
+                if(Bal > totalPrice.toDouble()) {
+                    val mAlertDialog = AlertDialog.Builder(this@CheckOut)
+                    mAlertDialog.setTitle("Check Out")
+                    mAlertDialog.setMessage("Total price is : $" + totalPrice + "\nComfirm to Proceed")
+                    mAlertDialog.setIcon(R.mipmap.ic_launcher);
+                    mAlertDialog.setPositiveButton("Comfirm") { dialog, id ->
+                        Toast.makeText(this@CheckOut, "Thank you!", Toast.LENGTH_SHORT).show()
+                        writeItemsTobuy()
+                        writeBought()
+                        //Update balance
+                        Bal -= totalPrice.toDouble()
+                        myRef.setValue(Bal)
+                        //Update store
+                        for (i in 0 until boughtUnit!!.size - 1) {
+                            if (boughtUnit!![i] > 0) {
+                                myStoreRef = database.getReference("Store0/" + i + "/Stock")
+                                myStoreRef.setValue(StockArray[i] - boughtUnit!![i])
+                            }
+                        }
 
+                        getInstance().bvClear()
+                        getInstance().finish()
+                        finish()
+
+                    }
+                    mAlertDialog.setNegativeButton("Cancel") { dialog, id ->
+                        dialog.dismiss()
+                    }
+                    mAlertDialog.show()
                 }
-                mAlertDialog.setNegativeButton("Cancel") { dialog, id ->
-                    dialog.dismiss()
-                }
-                mAlertDialog.show()
+                else Toast.makeText(this@CheckOut,"You dont have enough money!",Toast.LENGTH_SHORT).show()
             }
             else{
-                Toast.makeText(this@CheckOut,"You don have enough money!",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CheckOut,"Wait!",Toast.LENGTH_SHORT).show()
             }
         }
     }
