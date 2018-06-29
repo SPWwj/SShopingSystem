@@ -1,0 +1,15 @@
+Barcode :
+WM-100-1/10/2018
+AP-100-1/10/2018
+OR-100-1/10/2018
+GP-100-1/10/2018
+PR-100-1/10/2018
+================
+QR	:
+Apple
+Apple2
+Apple3
+Pear
+Orange
+Grape
+Watermelon

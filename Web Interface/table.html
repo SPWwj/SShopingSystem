@@ -34,7 +34,7 @@
 				data[i]["Sold"] = 100 - data[i]["Stock"];
 			}
 
-			visualization.data(data).draw();
+			visualization.data(data).cols(["Stock", "Sold", "Expire"]).draw();
 
 		});
 	}, 1500);

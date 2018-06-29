@@ -73,11 +73,11 @@ class ImportItems : AppCompatActivity() {
                         if(codeStringImport!!.length==16){
                             var S:String
                             S=codeStringImport!!.substring(0,2)
-                            if(S=="WM") S="Watermelon"
-                            else if (S=="AP") S="Apple"
-                            else if (S=="GP") S="Grape"
-                            else if (S=="OR") S="Orange"
-                            else if (S=="PR") S="Pear"
+                            if(S=="WM") S="WatermelonNew"
+                            else if (S=="AP") S="AppleNew"
+                            else if (S=="GP") S="GrapeNew"
+                            else if (S=="OR") S="OrangeNew"
+                            else if (S=="PR") S="PearNew"
                             tvItem.text=S
                             S=codeStringImport!!.substring(3,6)
                             tvQuantity.text=S
@@ -129,7 +129,7 @@ class ImportItems : AppCompatActivity() {
         builder.setPositiveButton("YES"){dialog, which ->
             // Do something when user press the positive button
             if(size!=-1) {
-                var myStoreRefImport=database.getReference("Store0/"+(size)+"/Item");
+                var myStoreRefImport=database.getReference("Store0/"+(size)+"/item");
                 myStoreRefImport.setValue(tvItem.text.toString())
                 myStoreRefImport=database.getReference("Store0/"+(size)+"/Stock");
                 myStoreRefImport.setValue((tvQuantity.text.toString().trim()).toInt())
