@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt/values-pt.xml",
+            "outputFile": "C:\\Users\\wwjwe\\Documents\\GitHub\\SShopingSystem\\Android Code\\SAssistBot\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-pt\\values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/zxing-android-embedded-3.6.0.aar/7d2f02e68e10a36ec9a97fd5df3f5ce8/res/values-pt/values-pt.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.6.0.aar\\cad3306455674c18bd3fa7c5cf1b8892\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,17 @@
                     }
                 },
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c4e05cf8d411e2d428c04f8be06e69dc/res/values-pt/values-pt.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6631e2c3e4ad8c48453038d8054b6dda\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
+                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
+                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c9158372adfc2e16ca606dd4ffcd5eec\\res\\values-pt\\values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -35,16 +45,6 @@
                         "startOffsets": "1989",
                         "endColumns": "100",
                         "endOffsets": "2085"
-                    }
-                },
-                {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/5e86849aaa794461b0ebabaf844efb37/res/values-pt/values-pt.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,225,331,438,527,628,746,829,909,996,1103,1215,1317,1425,1532,1642,1804,1904",
-                        "endColumns": "119,105,106,88,100,117,82,79,86,106,111,101,107,106,109,161,99,84",
-                        "endOffsets": "220,326,433,522,623,741,824,904,991,1098,1210,1312,1420,1527,1637,1799,1899,1984"
                     }
                 }
             ]

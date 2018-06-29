@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/WeiWenJie/Documents/Projects/SShoppingSystem/Android Code/SAssistBot/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-da/values-da.xml",
+            "outputFile": "C:\\Users\\wwjwe\\Documents\\GitHub\\SShopingSystem\\Android Code\\SAssistBot\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-da\\values-da.xml",
             "map": [
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/c58b009b9332b515cc770278f761c6b3/res/values-da/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "185",
-                        "endOffsets": "432"
-                    },
-                    "to": {
-                        "startLines": "27",
-                        "startColumns": "4",
-                        "startOffsets": "2981",
-                        "endColumns": "185",
-                        "endOffsets": "3162"
-                    }
-                },
-                {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/zxing-android-embedded-3.6.0.aar/7d2f02e68e10a36ec9a97fd5df3f5ce8/res/values-da/values-da.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.6.0.aar\\cad3306455674c18bd3fa7c5cf1b8892\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/f50c65bab3f171292f9c77db1d60e30b/res/values-da/values.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\a2cfb50979e8c3bc183e308307ca0007\\res\\values-da\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/c4e05cf8d411e2d428c04f8be06e69dc/res/values-da/values-da.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\c9158372adfc2e16ca606dd4ffcd5eec\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -72,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/WeiWenJie/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/5e86849aaa794461b0ebabaf844efb37/res/values-da/values-da.xml",
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\6631e2c3e4ad8c48453038d8054b6dda\\res\\values-da\\values-da.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -86,6 +69,23 @@
                         "startOffsets": "105,208,307,419,502,602,715,792,869,948,1057,1165,1261,1375,1477,1578,1731,4519",
                         "endColumns": "102,98,111,82,99,112,76,76,78,108,107,95,113,101,100,152,96,78",
                         "endOffsets": "203,302,414,497,597,710,787,864,943,1052,1160,1256,1370,1472,1573,1726,1823,4593"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\wwjwe\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\4da26978ebbc952644bea89c3fe90a9e\\res\\values-da\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "185",
+                        "endOffsets": "432"
+                    },
+                    "to": {
+                        "startLines": "27",
+                        "startColumns": "4",
+                        "startOffsets": "2981",
+                        "endColumns": "185",
+                        "endOffsets": "3162"
                     }
                 }
             ]

@@ -22,7 +22,7 @@ class ImportItems : AppCompatActivity() {
     private lateinit var  svBarcode: SurfaceView
     private  lateinit var detector: BarcodeDetector
     private  lateinit var cameraSource: CameraSource
-    var codeString :String?=null
+    var codeStringImport :String?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,8 +39,11 @@ class ImportItems : AppCompatActivity() {
                 val barcodes = detections?.detectedItems
                 if(barcodes!!.size()>0){
                     tvImportBarcode.post{
-                        codeString=barcodes.valueAt(0).displayValue
-                        tvImportBarcode.text= codeString
+                        codeStringImport=barcodes.valueAt(0).displayValue
+                        tvImportBarcode.text= codeStringImport
+                        if(codeStringImport!!.length==12){
+                            if(codeStringImport=="ABC-abc-0001"){}
+                        }
 
                     }
                 }

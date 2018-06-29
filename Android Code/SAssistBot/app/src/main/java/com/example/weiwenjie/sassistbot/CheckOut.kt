@@ -3,15 +3,17 @@ package com.example.weiwenjie.sassistbot
 import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
 import android.support.v7.app.AlertDialog
+import android.util.JsonReader
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import kotlinx.android.synthetic.main.activity_check_out.*
@@ -22,11 +24,10 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
 import java.lang.reflect.Array
-import java.util.ArrayList
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.ValueEventListener
-
+//import java.util.ArrayList
+import org.json.JSONObject
+import kotlin.collections.ArrayList
+import kotlin.math.log
 
 
 val mAuth = FirebaseAuth.getInstance()
@@ -65,22 +66,30 @@ class CheckOut : AppCompatActivity() {
                 // Failed to read value
             }
         })
-        for(i in 0 until StockArray!!.size-1){
-            myStoreRef= database.getReference("Store0/"+i+"/Stock")
+
+            myStoreRef= database.getReference("Store0")
             myStoreRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     // This method is called once with the initial value and again
                     // whenever data at this location is updated.
-                    StockArray[i] = dataSnapshot.getValue(Int::class.java)!!
+                    //val value= dataSnapshot.getValue(Integer::class.java)
+                    if (dataSnapshot.exists()) {
+                        var size: Int = dataSnapshot.childrenCount.toInt();
+                        for (i in 0 until size) {
+                            StockArray[i] = dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java)!!
+                            Log.d("Stockis ", dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java).toString())
+                        }
 
+                        boolStore = true
+                    }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
                     // Failed to read value
                 }
             })
-            if(i== StockArray.size-1) boolStore=true
-        }
+
+
         buyUnit = intent.extras.getIntArray("buyUnit")
         buyName = intent.extras.getStringArray("buyName")
         boughtUnit = intent.extras.getIntArray("boughtUnit")
@@ -133,7 +142,7 @@ class CheckOut : AppCompatActivity() {
                         Bal -= totalPrice.toDouble()
                         myRef.setValue(Bal)
                         //Update store
-                        for (i in 0 until boughtUnit!!.size - 1) {
+                        for (i in 0 until boughtUnit!!.size) {
                             if (boughtUnit!![i] > 0) {
                                 myStoreRef = database.getReference("Store0/" + i + "/Stock")
                                 myStoreRef.setValue(StockArray[i] - boughtUnit!![i])
