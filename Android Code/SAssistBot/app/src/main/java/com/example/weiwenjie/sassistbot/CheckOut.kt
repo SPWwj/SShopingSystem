@@ -77,7 +77,7 @@ class CheckOut : AppCompatActivity() {
                         var size: Int = dataSnapshot.childrenCount.toInt();
                         for (i in 0 until size) {
                             StockArray[i] = dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java)!!
-                            Log.d("Stockis ", dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java).toString())
+                            //Log.d("Stockis ", dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java).toString())
                         }
 
                         boolStore = true
