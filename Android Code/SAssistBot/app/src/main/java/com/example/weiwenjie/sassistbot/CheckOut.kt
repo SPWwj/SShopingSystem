@@ -41,7 +41,7 @@ private var items: ArrayList<String>? = null
 private var buysList: ArrayList<String>? = null
 private var buyUnit :IntArray? = null
 private var boughtUnit :IntArray? = null
-private var StockArray :IntArray = intArrayOf(0, 0, 0, 0, 0)
+private var StockArray : IntArray? = null
 internal var buyName: kotlin.Array<String>? = null
 private  var boolBal=false
 private  var boolStore=false
@@ -75,9 +75,10 @@ class CheckOut : AppCompatActivity() {
                     //val value= dataSnapshot.getValue(Integer::class.java)
                     if (dataSnapshot.exists()) {
                         var size: Int = dataSnapshot.childrenCount.toInt();
-                        for (i in 0 until size) {
-                            StockArray[i] = dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java)!!
-                            //Log.d("Stockis ", dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java).toString())
+                        StockArray=IntArray(size)
+                        for (i in 0 until (size)) {
+                            StockArray!![i] = dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java)!!
+                            Log.d("Stockis ", dataSnapshot.child(i.toString()).child("Stock").getValue(Int::class.java).toString())
                         }
 
                         boolStore = true
@@ -145,7 +146,7 @@ class CheckOut : AppCompatActivity() {
                         for (i in 0 until boughtUnit!!.size) {
                             if (boughtUnit!![i] > 0) {
                                 myStoreRef = database.getReference("Store0/" + i + "/Stock")
-                                myStoreRef.setValue(StockArray[i] - boughtUnit!![i])
+                                myStoreRef.setValue(StockArray!![i] - boughtUnit!![i])
                             }
                         }
 
