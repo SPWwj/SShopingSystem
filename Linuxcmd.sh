@@ -1,0 +1,2 @@
+while true; do curl -X GET --header 'Accept: application/json' --header 'x-cr-api-token: dcf0c1d8fa8d412786f00b08d0a230a1' --header 'Authorization: Basic T0JNT0Q5RTJMTlx0ZWFtMTU6cyRmJk1ENkkmUA==' 'https://things.s-apps.de1.bosch-iot-cloud.com/api/2/things?ids=bosch.xdk%3A8603250802351403' -o Bosch.txt ;curl -X PUT --data "@Bosch.txt" \
+ 'https://sassistbot.firebaseio.com/Bosch.json'; done

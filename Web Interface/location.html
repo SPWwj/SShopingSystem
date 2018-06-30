@@ -179,8 +179,8 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <script>
 
-
-
+var loadedData = null;
+      var riskFactor=null;
 
     // Function to easily calculate gradient from 2 colors and a percentage
     function makeGradientColor(color1, color2, percent) {
@@ -208,16 +208,6 @@
       return (newColor);
     }
 	
-
-			var x = 45;
-			var y = 60;
-			var z = 80;
-			var roll = Math.round(Math.abs(Math.atan2(y, z))*57.3);
-			var pitch = Math.round(Math.abs(Math.atan2(-x, Math.sqrt(y*y + z*z)))*57.3);
-			var riskFactor=(roll/180+pitch/90)/2;
-			
-			console.log(riskFactor);
-
 		
     // var color1 = {r:255, g:251, b:213};
     var color1 = { r: 255, g: 255, b: 255 };
@@ -420,58 +410,19 @@
       // Bind our overlay to the map
       overlay.setMap(map);
       // Load the station data. When the data comes back, create an overlay.
-      var loadedData = null;
-      var url = "https://r1d78evbsg.execute-api.ap-northeast-1.amazonaws.com/View";
+      var url = "https://sassistbot.firebaseio.com/Bosch.json";
       var firstTime = true;
       function loadNext() {
         timeout = setTimeout(loadNext, 5000);
         $.getJSON(url, function (data) {
           // google.maps.event.trigger(map, 'resize');
           loadedData = data;
-
-
-          var arrayD = 0;
-          arrayD = data["ID0"];
-          var graphD = 0;
-          graphD = arrayD[3];
-
-
-          function tick() {
-            now = new Date()
-
-            // Add new values
-            for (var name in groups) {
-              var group = groups[name]
-              //group.data.push(group.value) // Real values arrive at irregular intervals
-
-              group.data.push(graphD * 100)
-              group.path.attr('d', line)
-            }
-
-            // Shift domain
-            x.domain([now - (limit - 2) * duration, now - duration])
-
-            // Slide x-axis left
-            axis.transition()
-              .duration(duration)
-              .ease('linear')
-              .call(x.axis)
-
-            // Slide paths left
-            paths.attr('transform', null)
-              .transition()
-              .duration(duration)
-              .ease('linear')
-              .attr('transform', 'translate(' + x(now - (limit - 1) * duration) + ')')
-              .each('end', tick)
-
-            // Remove oldest data point from each group
-            for (var name in groups) {
-              var group = groups[name]
-              group.data.shift()
-            }
-          }
-          tick()
+          var accX=loadedData[0]["features"]["Accelerometer_0"]["properties"]["status"]["xValue"];
+          var accY=loadedData[0]["features"]["Accelerometer_0"]["properties"]["status"]["yValue"];
+          var accZ=loadedData[0]["features"]["Accelerometer_0"]["properties"]["status"]["zValue"];
+          var roll = Math.round(Math.abs(Math.atan2(accY, accZ))*57.3);
+			    var pitch = Math.round(Math.abs(Math.atan2(-accX, Math.sqrt(accY*accY + accZ*accZ)))*57.3);
+			    riskFactor=(roll/180+pitch/90)/2;
 
           // console.log(d3.values(data[2]))
           overlay.draw();
