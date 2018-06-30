@@ -3,6 +3,7 @@ package com.example.weiwenjie.sassistbot;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class TransactionActy extends AppCompatActivity {
     private ArrayList<String> items;
@@ -36,16 +39,24 @@ public class TransactionActy extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         final FirebaseUser user = mAuth.getCurrentUser();
         assert user != null;
-        myRef = database.getReference(user.getUid());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy");
+        final String currentDate = sdf.format(new Date());
+        myRef = database.getReference(user.getUid()+"Purchase").child(currentDate);
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String value = dataSnapshot.getValue(String.class);
-                if(value!=null){
+                if(dataSnapshot.exists()){
                     itemsAdapter.clear();
-
+                    items.add(currentDate);
+                    int size =(int) dataSnapshot.getChildrenCount();
+                    //String value = dataSnapshot.getValue(String.class);
+                    for (int i=0 ; i < size;i++) {
+                        items.add("--"+dataSnapshot.child(Integer.toString(i)).getValue(String.class));
+                                //Log.d("Stockis ", dataSnapshot.child(Integer.toString(i)).getValue(String.class));
+                    }
+                    itemsAdapter.notifyDataSetChanged();
                 }
             }
 

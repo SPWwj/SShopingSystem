@@ -26,6 +26,8 @@ import java.io.IOException
 import java.lang.reflect.Array
 //import java.util.ArrayList
 import org.json.JSONObject
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.*
@@ -37,6 +39,8 @@ val mAuth = FirebaseAuth.getInstance()
 internal var database = FirebaseDatabase.getInstance()
 val myRef = database.getReference("Balance")
 var myStoreRef=database.getReference("Store0");
+
+
 
 val user = mAuth.currentUser
 var myRefPuch = database.getReference(user!!.getUid()+"Purchase")
@@ -52,12 +56,15 @@ internal var buyName: kotlin.Array<String>? = null
 private  var boolBal=false
 private  var boolStore=false
 private var Bal: Double = 0.toDouble()
+val sdf = SimpleDateFormat("dd-M-yyyy")
+val currentDate = sdf.format(Date())
+var purSize:Int = 0
+
 class CheckOut : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_out)
-
         // Read from the database
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -95,6 +102,21 @@ class CheckOut : AppCompatActivity() {
                     // Failed to read value
                 }
             })
+        myRefPuch = database.getReference(user!!.getUid()+"Purchase").child(currentDate)
+        myRefPuch.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                //val value= dataSnapshot.getValue(Integer::class.java)
+                if (dataSnapshot.exists()) {
+                    purSize= dataSnapshot.childrenCount.toInt();
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Failed to read value
+            }
+        })
 
 
         buyUnit = intent.extras.getIntArray("buyUnit")
@@ -149,15 +171,20 @@ class CheckOut : AppCompatActivity() {
                         Bal -= totalPrice.toDouble()
                         myRef.setValue(Bal)
                         //Update store
-                        val sdf = SimpleDateFormat("dd-M-yyyy hh:mm:ss")
-                        val currentDate = sdf.format(Date())
                         myRefPuch = database.getReference(user!!.getUid()+"Purchase").child(currentDate)
                         for (i in 0 until boughtUnit!!.size) {
                             if (boughtUnit!![i] > 0) {
                                 myStoreRef = database.getReference("Store0/" + i + "/Stock")
                                 myStoreRef.setValue(StockArray!![i] - boughtUnit!![i])
-                                myRefPuch = database.getReference(user!!.getUid()+"Purchase").child(currentDate).child(i.toString())
-                                myRefPuch.setValue(buyName!![i]+":"+ boughtUnit!![i])
+
+                                if(boughtUnit!![i]!=0) {
+                                    myRefPuch = database.getReference(user!!.getUid() + "Purchase").child(currentDate).child(purSize.toString())
+                                    val setPrice = boughtUnit!![i] * priceArray[i]
+                                    val df = DecimalFormat("#.##")
+                                    df.roundingMode = RoundingMode.CEILING
+                                    df.format(setPrice)
+                                    myRefPuch.setValue(buyName!![i] + ":" + boughtUnit!![i] + "  Price : $" + setPrice)
+                                }
 
                             }
                         }
