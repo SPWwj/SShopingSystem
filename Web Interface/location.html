@@ -137,6 +137,13 @@
         transform: rotate(360deg);
       }
     }
+	div.fixed {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 300px;
+   
+}
   </style>
   <script type="text/javascript">
     //< !--
@@ -190,6 +197,7 @@
         }
         return (str);
       }
+	  
       newColor.r = makeChannel(color1.r, color2.r);
       newColor.g = makeChannel(color1.g, color2.g);
       newColor.b = makeChannel(color1.b, color2.b);
@@ -199,6 +207,18 @@
         makeColorPiece(newColor.b);
       return (newColor);
     }
+	
+
+			var x = 45;
+			var y = 60;
+			var z = 80;
+			var roll = Math.round(Math.abs(Math.atan2(y, z))*57.3);
+			var pitch = Math.round(Math.abs(Math.atan2(-x, Math.sqrt(y*y + z*z)))*57.3);
+			var riskFactor=(roll/180+pitch/90)/2;
+			
+			console.log(riskFactor);
+
+		
     // var color1 = {r:255, g:251, b:213};
     var color1 = { r: 255, g: 255, b: 255 };
     // var color2 = {r:178, g:10, b:44};
@@ -274,8 +294,7 @@
             var marker = layer.selectAll("svg")
               .data(d3.entries(loadedData))
               .each(transform) // update existing markers
-              .enter().append("svg")
-              .each(transform)
+              .enter().append("svg")             
               .attr("class", "marker");
             // Add a circle.
             marker.append("circle")
@@ -483,6 +502,16 @@
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbnHy_9HBHYDYssKdBjJyX2W96lYoB5m8&callback=initMap&language=en&region=SG"
     async defer></script>
+	
 </body>
+
+<div class="fixed">
+
+<a href="table.html">
+  <img src="whiteback.gif" alt="To Stock Table" style="width:42px;height:42px;border:0">
+</a>
+<h0><font color="white">To Stock Table</font></h0>
+
+</div>
 
 </html>

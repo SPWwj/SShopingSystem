@@ -6,10 +6,32 @@
 
 <div id="viz"></div>
 
+<style>
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: auto;
+    width: 300px;
+
+}
+</style>
+
+<html>
+
+<div class="fixed">
+
+<a href="location.html">
+  <img src="back.gif" alt="To Cart Console" style="width:42px;height:42px;border:0">
+</a>
+<h0>To Cart Console</h0>
+
+</div>
+
 <script>
 	var url = "https://sassistbot.firebaseio.com/Store0.json";
 	var visualization
 	var loadedData = null;
+	
 	d3.json(url, function (data) {
 		loadedData = data;
 		for (var i = 0; i < data.length; i++) {
@@ -39,4 +61,9 @@
 		});
 	}, 1500);
 
+	
+
 </script>
+
+
+</html>
