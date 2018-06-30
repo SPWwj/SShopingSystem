@@ -38,7 +38,9 @@
         <activity android:name=".AccEditActivity" />
         <activity android:name=".AccMenu" />
         <activity android:name=".SmartThings" />
-        <activity android:name=".ImportItems"></activity>
+        <activity android:name=".ImportItems" />
+        <activity android:name=".Transaction" />
+        <activity android:name=".TransactionActy" />
     </application>
 
 </manifest>

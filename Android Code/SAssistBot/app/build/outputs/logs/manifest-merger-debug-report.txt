@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\6631e2c3e4ad8c48453038d8054b6dda\AndroidManifest.xml:17:1-22:12
 MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.12] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\android-gif-drawable-1.2.12.aar\c60cf8a50ab53884ba72a73a12e8123b\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\2bf089daeec17259baa326ffcc3da3c3\AndroidManifest.xml:2:1-11:12
@@ -48,20 +48,20 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\wwjwe\.gradle\cach
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.0] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.0.aar\70937c60d38365867822b37a5acd29df\AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\7b60bb7df805e4898a3c32a103f6ea2f\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\0f56395f1c7f4629b7568d74a2c2edc5\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
-INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
 	package
 		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:3:5-47
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-44:12
+		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:1-46:12
 		INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:2:11-69
@@ -96,7 +96,7 @@ ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBo
 	android:name
 		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:11:29-69
 application
-ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:13:5-42:19
+ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:13:5-44:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\2bf089daeec17259baa326ffcc3da3c3\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.1] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.1.aar\2bf089daeec17259baa326ffcc3da3c3\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.gms:play-services-vision:15.0.2] C:\Users\wwjwe\.gradle\caches\transforms-1\files-1.1\play-services-vision-15.0.2.aar\d2af2d18a7e853c37c87d1f5675c2a1d\AndroidManifest.xml:7:5-20
@@ -218,9 +218,17 @@ ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBo
 	android:name
 		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:40:19-46
 activity#com.example.weiwenjie.sassistbot.ImportItems
-ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:41:9-58
+ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:41:9-49
 	android:name
 		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:41:19-46
+activity#com.example.weiwenjie.sassistbot.Transaction
+ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:42:9-49
+	android:name
+		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:42:19-46
+activity#com.example.weiwenjie.sassistbot.TransactionActy
+ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:43:9-53
+	android:name
+		ADDED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml:43:19-50
 uses-sdk
 INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\wwjwe\Documents\GitHub\SShopingSystem\Android Code\SAssistBot\app\src\main\AndroidManifest.xml

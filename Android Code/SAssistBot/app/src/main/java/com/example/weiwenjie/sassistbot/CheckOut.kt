@@ -26,6 +26,9 @@ import java.io.IOException
 import java.lang.reflect.Array
 //import java.util.ArrayList
 import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.math.log
 
@@ -34,6 +37,9 @@ val mAuth = FirebaseAuth.getInstance()
 internal var database = FirebaseDatabase.getInstance()
 val myRef = database.getReference("Balance")
 var myStoreRef=database.getReference("Store0");
+
+val user = mAuth.currentUser
+var myRefPuch = database.getReference(user!!.getUid()+"Purchase")
 
 private var itemsAdapter: ArrayAdapter<String>? = null
 private var items: ArrayList<String>? = null
@@ -143,12 +149,19 @@ class CheckOut : AppCompatActivity() {
                         Bal -= totalPrice.toDouble()
                         myRef.setValue(Bal)
                         //Update store
+                        val sdf = SimpleDateFormat("dd-M-yyyy hh:mm:ss")
+                        val currentDate = sdf.format(Date())
+                        myRefPuch = database.getReference(user!!.getUid()+"Purchase").child(currentDate)
                         for (i in 0 until boughtUnit!!.size) {
                             if (boughtUnit!![i] > 0) {
                                 myStoreRef = database.getReference("Store0/" + i + "/Stock")
                                 myStoreRef.setValue(StockArray!![i] - boughtUnit!![i])
+                                myRefPuch = database.getReference(user!!.getUid()+"Purchase").child(currentDate).child(i.toString())
+                                myRefPuch.setValue(buyName!![i]+":"+ boughtUnit!![i])
+
                             }
                         }
+
 
                         getInstance().bvClear()
                         getInstance().finish()

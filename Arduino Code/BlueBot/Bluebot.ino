@@ -99,34 +99,34 @@ void loop() {
       timeCount=0;
     }
   }
- // Serial.println(timeCount);
+ Serial.println(timeCount);
 }
 
 void Left() {
   svL.write(93);
-  svR.write(33);
+  svR.write(53);
 
 }
 
 
 void Right() {
 
-  svL.write(153);
+  svL.write(133);
   svR.write(93);
 
 }
 
 
 void Forward() {
-  svL.write(133);
-  svR.write(3);
+  svL.write(113);
+  svR.write(23);
   //print(""forward)
 }
 
 
 void Back() {
-  svL.write(3);
-  svR.write(133);
+  svL.write(23);
+  svR.write(113);
 }
 
 

@@ -80,6 +80,8 @@
         <activity android:name="com.example.weiwenjie.sassistbot.AccMenu" />
         <activity android:name="com.example.weiwenjie.sassistbot.SmartThings" />
         <activity android:name="com.example.weiwenjie.sassistbot.ImportItems" />
+        <activity android:name="com.example.weiwenjie.sassistbot.Transaction" />
+        <activity android:name="com.example.weiwenjie.sassistbot.TransactionActy" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
