@@ -329,7 +329,7 @@
             console.log('Data is null, not loading');
           }
           function transform(d) {
-            let riskFactor = d.value[3];
+            //let riskFactor = 0.98; //for testing 
             let color = makeGradientColor(color1, color2, riskFactor * 100).cssColor;
             d = new google.maps.LatLng(loc["Lat"], loc["Lng"]);
             d = projection.fromLatLngToDivPixel(d);
